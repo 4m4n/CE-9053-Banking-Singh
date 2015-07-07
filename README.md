@@ -14,7 +14,7 @@ You can clone this project and send me the link to the repo, or you can just cre
 
 ## BankAccount Creation 
 
-* accountId - must be specified
+* id - must be specified
 * balance - defaults to zero - if specified must be a number greater than or equal to 0
 * locked - defaults to false - if specified must be true or false
 
@@ -26,7 +26,7 @@ example:
 
 ```
 var bankAccount = new BankAccount({
-  accountId: ‘abc’,
+  id: ‘abc’,
   balance: 1000,
   locked: false
  });
@@ -34,7 +34,7 @@ var bankAccount = new BankAccount({
 or 
 
 bankAccount = new BankAccount({
-  accountId: ‘abc'
+  id: ‘abc'
 });
 console.log(bankAccount.balance);//should print 0 
 console.log(bankAccount.locked);//should print false 
@@ -44,17 +44,17 @@ bankAccount = new BankAccount({
 });//should throw an exception
 
 bankAccount = new BankAccount({
-    accountId: 'abc',
+    id: 'abc',
     balance: -1
 });//should throw an exception
 
 bankAccount = new BankAccount({
-    accountId: 'abc',
+    id: 'abc',
     balance: 'bar' 
 });//should throw an exception
 
 bankAccount = new BankAccount({
-    accountId: 'abc',
+    id: 'abc',
     locked: 'foo'
 });//should throw an exception
 ```
